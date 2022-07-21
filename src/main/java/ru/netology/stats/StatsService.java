@@ -44,9 +44,10 @@ public class StatsService {
 
 
     public int numberBelowAverage(long[] sales) {
+        long avg = averageSalesAmounts(sales);
         int minAverage = 0;
         for (long sale : sales) {
-            if (sale < averageSalesAmounts(sales)) {
+            if (sale < avg) {
                 minAverage = minAverage + 1;
             }
 
@@ -55,9 +56,10 @@ public class StatsService {
     }
 
     public int numberAboveAverage(long[] sales) {
+        long avg = averageSalesAmounts(sales);
         int maxAverage = 0;
         for (long sale : sales) {
-            if (sale > averageSalesAmounts(sales)) {
+            if (sale > avg) {
                 maxAverage = maxAverage + 1;
             }
 

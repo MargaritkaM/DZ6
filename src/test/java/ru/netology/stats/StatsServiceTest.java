@@ -10,7 +10,7 @@ public class StatsServiceTest {
     public void getSumAllSales() {
         StatsService service = new StatsService();
         long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 8, 14, 14, 18};
-        long expectedDay = 181;
+        long expectedDay = 8 + 15 + 13 + 15 + 17 + 20 + 19 + 20 + 8 + 14 + 14 + 18;
         long actualDay = service.sumAllSales(sales);
 
         Assertions.assertEquals(expectedDay, actualDay);
